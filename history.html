@@ -7,56 +7,110 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style_history.css">
     <title>History</title>
+    <link rel="stylesheet" href="style_history.css">
 </head>
-
-
 <body>
-    <header>
-        <a href="#" class="logo">History</a>
-        <ul>
-            <li><a href="#">Home|</a></li>
-            <li><a href="#">About|</a></li>
-            <li><a href="#">Login/Register|</a></li>
-            <!-- <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login/Register|</button></li> -->
-            <!-- <li><a href="#">Admin</a></li>  FFFFFFF IMPPORTANTTTT-->
-            <!-- <li><a href="#">Profile</a></li>
-            <li><a href="#">Logout</a></li> -->
-            <li><a href="#" class="active">History|</a></li>
-            <li><a href="#">Races|</a></li>
-            <li><a href="#">Raport</a></li>
-        </ul>
+    <div class="full-page">
+        <div class="navbar">
+            <nav>
+                <div class="logo">
+                    <h4>History</h4>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">Home|</a></li>
+                    <li><a href="#">About|</a></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login/Register|</button></li>
+                    <!-- <li><a href="#">Admin</a></li>  FFFFFFF IMPPORTANTTTT-->
+                    <!-- <li><a href="#">Profile</a></li>
+                    <li><a href="#">Logout</a></li> -->
+                    <li><a href="#">History|</a></li>
+                    <li><a href="#">Races|</a></li>
+                    <li><a href="#">Raport</a></li>
+        
+                </ul>
 
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+
+                
+            </nav>
         </div>
         
-    </header>
-
-
-    <section>
-        <img src="history_bg.jpg" id="cat_background">
-        <!-- <a href="#" class="btn">See last bets</a> -->
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Login</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+                    </div>
+                <form id='login' class='input-group-login' action="Home.html" method="post">
+                    <input type='text'class='input-field'placeholder='Email' required >
+                    <input type='password'class='input-field'placeholder='Password' required>
+                    <input type='checkbox'class='check-box'><span>Remember password</span>
+                    <button type='submit'class='submit-btn'>Login</button> 
+                </form>
         
-    </section>
+                <form id='register' class='input-group-register'>
+                    <input type='text'class='input-field'placeholder='First Name' required>
+                    <input type='text'class='input-field'placeholder='Last Name' required>
+                    <input type='email'class='input-field'placeholder='Email' required>
+                    <input type='password'class='input-field'placeholder='Password' required>
+                    <input type='password'class='input-field'placeholder='Confirm Password'  required>
+                    <button type='submit'class='submit-btn'>Register</button>
+                </form>
+            </div>
+        </div>
 
-    <div class="bets">
-        <a href="#" class="btn">See last bets</a>
+        <section class="history">
+            <img src="history_bg2.jpeg" id="cat_background">
+                    <h1>Latest info</h1>
+                    <h2>about bets</h2>
+                    <p>blablabla Informatii gen calendar, cand poti pune urmatorul bilet, 
+                        Cand apesi pe buton vezi cele mai bune psici din istorie si meciurile viitoare
+                        etc etc etc. Bla bla bla text fara sens: Cu toate ca majoritatea pisicilor domestice nu trebuie sa-si prinda hrana, 
+                        instinctul lor este de a vana. Nasul sensibil detecteaza rapid hrana.
+                        Datorita picioarelor lor cu pernite moi, ele isi pot urmari prada fara
+                        sa fie observate, pana cand sunt destul de aproape pentru a sari. Prind prada 
+                        cu ghearele si o omoara cu o muscatura puternica, in mod obisnuit la ceafa, rupand gatul victimei.
+                        Chiar si o pisica domestica are instinctele de vanatoare ale rudelor sale salbatice. 
+                        Deseori pisicile se joaca cu prada lor, in loc sa o omoare imediat. Ele vaneaza de 
+                        obicei noaptea, prinzand soareci, pasari mici si insecte.</p>
+                    <button type="button">See more</button>
+            
+        </section>
+        
     </div>
+    <script>
 
-    
-
-    <div class="sec">
-        <h2> Info</h2>
-        <p><BET 1: Pisica este foarte apropiata de pisica salbatica europeana (Felis silvestris silvestris). 
-            Pisica traieste in stransa legatura cu oamenii de cel putin 3500 de ani, fiind folosita de catre 
-            egipteni pentru a tine departe soarecii. In ciuda domesticirii, pisica nu a pierdut abilitatea de 
-            a trai in salbaticie, unde formeaza colonii. Potrivit studiului publicat in Journal of Archaeological 
-            Science, egiptenii au fost cei care au transformat pisicile in animale domestice.<br><br></p>
-    </div>
+        var x=document.getElementById('login');
+        var y=document.getElementById('register');
+        var z=document.getElementById('btn');
+        function register()
+        {
+            x.style.left='-400px';
+            y.style.left='50px';
+            z.style.left='110px';
+        }
+        function login()
+        {
+            x.style.left='50px';
+            y.style.left='450px';
+            z.style.left='0px';
+        }
+    </script>
+    <script>
+        var modal1 = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal1) { modal1.style.display = "none"; }
+        }
+            
+    </script>
+    <script src="app.js"></script>
 
     
 
