@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+.full-page
+{
+    height: 100%;
+	width: 100%;
+	background-image: url(history_bg.jpg);
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
 
 nav{
     display: flex;
@@ -149,6 +158,7 @@ nav ul li button:hover
 #login-form
 {
     display: none;
+    justify-content: space-around;
 }
 
 
@@ -156,8 +166,8 @@ nav ul li button:hover
 {
     width:380px;
 	height:480px;
-	position:relative;
-	margin:2% auto;
+	position: relative;
+	margin: 2% auto;
 	background:#9d8575;
     overflow: hidden;
 }
@@ -255,12 +265,12 @@ nav ul li button:hover
 {
     width: 100%;
     padding: 78px 0px;
-    background-color: white;
+    /* background-color: white; */
     /* padding-left:10; */
 
 }
 
-.history::before
+/* .history::before
 {
     background: linear-gradient(to top, #734F4A, transparent)
 }
@@ -270,7 +280,7 @@ nav ul li button:hover
     float: right;
     height: auto;
     width: 990px;
-}
+} */
 
 .history h1
 {
@@ -322,31 +332,28 @@ nav ul li button:hover
 
 .history button
 {
-    margin: 0 auto;
+    margin: auto;
     height: 45px;
     width: 180px;
-    max-width: 45%;
+    max-width: 60%;
     align-items: center;
     /* left:2em;
     right: 10em; */
     justify-content: space-around;
     display: flex;
-
-}
-
-button
-{
     background: #9d8575;
     color: white;
     text-decoration: none;
-    border: 2px solid transparent;
+    border: 10px solid transparent;
     font-weight: none;
-    /* padding-left: 35px; */
     border-radius: 35px;
     transition: .4s;
+    
+
 }
 
-button:hover
+
+.history button:hover
 {
     color: #9d8575;
     background: transparent;
