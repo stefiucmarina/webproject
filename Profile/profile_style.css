@@ -228,13 +228,13 @@ nav {
     }
 
     .profile-card {
-        width: 90%;
+        width: 50%;
         margin: auto;
         margin-top: 20px;
     }
 
     .info {
-        width: 90%;
+        width: 50%;
         margin: auto;
         margin-top: 50px;
     }
@@ -277,6 +277,14 @@ nav {
 
     .burger {
         display: block;
+    }
+
+    .profile-card {
+        width: 90%;
+    }
+
+    .info {
+        width: 90%;
     }
 }
 
