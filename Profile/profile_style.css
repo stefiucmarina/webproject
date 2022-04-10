@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body
+{
+    background: url(Cats\ pics/cat_006.jpg) no-repeat right center fixed; 
+    background-color: #000000;
+}
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -61,26 +67,23 @@ nav {
 
 
 
-.content{
-    height:100vh;
-    background: url(Cats\ pics/cats_02.png) no-repeat right;
-    background-color: #c1c1c1;
+.content {
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
     font-family: 'Montserrat', sans-serif;
 }
 
 .profile-card {
-    width: 300px;
-    height: 600px;
     text-align: center;
     margin-right: 50px;
+    margin-left: 250px;
+    margin-top: 10px;
 }
 
 .card-header {
     padding: 60px 40px;
-    background: #9D8575;
+    background-color: #9D8575;
 }
 
 .picture {
@@ -92,88 +95,144 @@ nav {
 
 .picture img {
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
 
-.personal-info{
-    padding:40px 40px;
+.personal-info {
+    padding: 40px 40px;
+    color: white;
 }
 
 .card-footer {
-    background: #9D8575;
+    background: #734F4A;
     padding: 20px 40px;
+    align-items: center;
+    display: flex inline;
+}
+
+.card-footer button {
+    border: none;
+    background-color: inherit;
+    padding-right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.card-footer button:hover {
+    color: black;
 }
 
 
 
 
-
-
-
-.info{
+.info {
 
     text-align: center;
     margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 10px;
 }
 
-.info h5{
+.info h5 {
     font-size: large;
     padding-bottom: 20px;
 }
 
-.races{
+.races {
+    color: white;
     padding: 60px 40px;
-    background: #F8FCDA;
     margin-bottom: 10px;
+    background-color: #734F4A;
 }
 
-.download{
-    padding: 60px 40px;
-    background: #F8FCDA;
-    margin-bottom: 10px;
+#matches td,
+#matches th {
+    border: 1px solid #9D8575;
+    padding: 8px;
 }
 
-.download button
-{
+#matches th {
+    background-color: #9D8575;
+}
+
+#matches td:hover {
+    background-color: #9D8575;
+}
+
+.download {
+    padding: 60px 40px;
+    color: white;
+    margin-bottom: 10px;
+    background-color: #9D8575;
+}
+
+.download button {
     width: 100px;
     height: 50px;
-    background-color: #E3E9C2;
+    color: white;
+    background-color: #9D8575;
     border-color: #734F4A;
     text-align: center;
     display: flex inline;
     border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.download button:hover
-{
-    background-color: #9D8575;
+.download button:hover {
+    background-color: #734F4A;
+    cursor: pointer;
+
 }
 
-.balance{
+.balance {
     padding: 60px 40px;
-    background: #F8FCDA;
     margin-bottom: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: #734F4A;
 }
 
-.balance button{
+.balance button {
     width: 100px;
     height: 50px;
-    background-color: #E3E9C2;
+    color: white;
+    background-color: #9D8575;
     border-color: #734F4A;
     border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.balance button:hover{
-    background-color: #9D8575;
+.balance button:hover {
+    background-color: #734F4A;
+    cursor: pointer;
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .nav-links {
         width: 60%;
     }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-card
+    {
+        margin-top: 150px;
+        margin-left: 40px;
+    }
+
+    .info {
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 100px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -202,7 +261,6 @@ nav {
     .burger {
         display: block;
     }
-
 }
 
 
