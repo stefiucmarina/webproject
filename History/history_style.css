@@ -73,7 +73,7 @@ nav {
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
     flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
+    font-size: large;
 }
 
 
@@ -83,6 +83,18 @@ nav {
     color: white;
     font-size: large;
     margin-bottom: 10px;
+}
+
+.bsubmit
+{
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: #9D8575;
+    border-color: #734F4A;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
 }
 
 .races {
@@ -104,6 +116,19 @@ nav {
     background-color: #9D8575;
 }
 
+
+.braces
+{
+    width: 150px;
+    height: 50px;
+    color: white;
+    background-color: #9D8575;
+    border-color: #734F4A;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    margin-top: 20px;
+}
 
 @media screen and (max-width: 1200px) {
     .nav-links {
@@ -138,6 +163,7 @@ nav {
     .burger {
         display: block;
     }
+
 }
 
 
