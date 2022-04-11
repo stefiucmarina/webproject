@@ -46,18 +46,21 @@
         <div class="races">
             <table id="matches">
                 <tr>
+                    <th>ID</th>
                     <th>Race</th>
                     <th>1st Cat Odds </th>
                     <th>2nd Cat Odds</th>
                     <th>Date</th>
                 </tr>
                 <tr>
+                    <td>R120</td>
                     <td>Blue vs. Red</td>
                     <td>2.35</td>
                     <td>3.65</td>
                     <td>11.04.2022</td>
                 </tr>
                 <tr>
+                    <td>R121</td>
                     <td>Tasha vs. Trixie</td>
                     <td>5.02</td>
                     <td>4.78</td>
@@ -69,6 +72,8 @@
         <div class="info">
             <h5>Place your bet</h5>
             <form class="ticket" action="">
+                <label for="code">Race ID:</label><br>
+                <input type="text" id="code" name="code" default value="R001"><br>
                 <label for="cat">Cat:</label><br>
                 <input type="text" id="cat" name="cat" default value="Red"><br>
                 <label for="money">Amount ($): </label><br>

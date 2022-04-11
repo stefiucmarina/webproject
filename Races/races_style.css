@@ -145,7 +145,7 @@ nav {
     margin-bottom: 10px;
 }
 
-.ticket #cat,
+.ticket #code, #cat,
 #money {
     height: 30px;
     width: 250px;
