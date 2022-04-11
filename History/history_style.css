@@ -73,7 +73,6 @@ nav {
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
     flex-direction: column;
-    font-size: large;
 }
 
 
@@ -81,6 +80,14 @@ nav {
 {
     align-items: center;
     color: white;
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+.form_date #match_day {
+    height: 30px;
+    width: 250px;
+    font-family: 'Montserrat', sans-serif;
     font-size: large;
     margin-bottom: 10px;
 }
@@ -143,7 +150,7 @@ nav {
     }
 
     .nav-links {
-        position: absolute;
+        position: fixed;
         right: 0px;
         height: 100vh;
         top: 0vh;
