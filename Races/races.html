@@ -10,20 +10,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="history_style.css">
-    <title>History</title>
+    <link rel="stylesheet" href="races_style.css">
+    <title>Races</title>
 
 </head>
 
 <body>
     <nav>
         <div class="logo">
-            <h4>HISTORY|</h4>
+            <h4>RACES</h4>
         </div>
         <ul class="nav-links">
             <li><a href="#">About</a></li>
             <li><a href="#">Profile</a></li>
-            <li><a href="#">Races</a></li>
+            <li><a href="#">History</a></li>
             <li><a href="#">Raport</a></li>
 
         </ul>
@@ -40,33 +40,44 @@
         <form class="form_date" action="">
             <label for="match_day">Choose a date:</label>
             <input type="date" id="match_day" name="match_day">
-            <input class="bsubmit" type="submit">
+            <input class="bsubmit" type="submit" value="Select">
         </form>
 
         <div class="races">
             <table id="matches">
                 <tr>
                     <th>Race</th>
+                    <th>1st Cat Odds </th>
+                    <th>2nd Cat Odds</th>
                     <th>Date</th>
-                    <th>Winner</th>
-                    <th>Outcome</th>
                 </tr>
                 <tr>
-                    <td>Pablo vs. Escobar</td>
-                    <td>10.04.2022</td>
-                    <td>Pablo</td>
-                    <td>+20$</td>
+                    <td>Blue vs. Red</td>
+                    <td>2.35</td>
+                    <td>3.65</td>
+                    <td>11.04.2022</td>
                 </tr>
                 <tr>
-                    <td>Yuki vs. Cookie</td>
+                    <td>Tasha vs. Trixie</td>
+                    <td>5.02</td>
+                    <td>4.78</td>
                     <td>10.04.2022</td>
-                    <td>Cookie</td>
-                    <td>-</td>
                 </tr>
             </table>
         </div>
 
-        <button class="braces">Try your luck now!</button>
+        <div class="info">
+            <h5>Place your bet</h5>
+            <form class="ticket" action="">
+                <label for="cat">Cat:</label><br>
+                <input type="text" id="cat" name="cat" default value="Red"><br>
+                <label for="money">Amount ($): </label><br>
+                <input type="number" id="money" name="money" default value="50"><br><br>
+                <!-- <input class="braces" type="submit" value="Bet Now!"> -->
+            </form>
+
+            <button class="braces">Bet now!</button>
+        </div>
 
     </div>
 
