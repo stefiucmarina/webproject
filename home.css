@@ -8,16 +8,39 @@
   text-align : center;
   color      : white;
   font-size  : 30px;
-  position: absolute;
-  top: 50%;
-  right:50%;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
   width: auto;
-  padding: 10px;
-  border: 5px ;
-  background: rgba(0, 0, 0, 0.5);
-  transform: translate(0, -50%);
-  border-radius: 25px;
+  height: 400px;
+  justify-content: center;
+  padding: 1rem;
 
+}
+
+.butoane {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.btn {
+padding: 1rem;
+width: 100px;
+text-align: center;
+font-size: 15px;
+background-color: #734F4A;
+color: aliceblue;
+margin: 15px;
+text-decoration: none;
+transition: 0.3s ease;
+border-radius: 25px;
+}
+
+.btn:hover
+{
+  background-color: rgba(115, 79, 74,0.8);
+  transition: 0.3s ease;
 }
 
 nav{
@@ -86,7 +109,7 @@ nav{
       overflow-x: hidden;
   }
   .nav-links{
-      position: absolute;
+      position: fixed;
           right: 0px;
           height: 92vh;
           top: 8vh;
@@ -108,6 +131,13 @@ nav{
 
 }
 
+@media screen and  (max-width: 768px){
+  .welcome{
+    font-size  : 20px;
+    height: 300px;
+  }
+  
+}
 
 .nav-active{
   transform: translateX(0%);
@@ -141,8 +171,8 @@ nav{
 
 }
 
-html { 
-  background: url("C:\\Users\\camel\\OneDrive\\Desktop\\facultate\\webproject\\pics\\try.jpg") no-repeat center center fixed; 
+body { 
+  background: url("pics\\pisici.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
