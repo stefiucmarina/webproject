@@ -15,6 +15,7 @@
   height: 400px;
   justify-content: center;
   padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -28,10 +29,10 @@ justify-content: center;
 padding: 1rem;
 width: 100px;
 text-align: center;
-font-size: 15px;
+font-size: 20px;
 background-color: #734F4A;
 color: aliceblue;
-margin: 15px;
+margin: 20px;
 text-decoration: none;
 transition: 0.3s ease;
 border-radius: 25px;
