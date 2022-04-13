@@ -38,3 +38,7 @@ Acestea sunt paginile implementate de noi:
  - Report: Cuprinde date despre modul in care a fost realizata pagina, functiile acesteia si detalii despre contributia fiecarui membru.
 
  ![plot](Screenshots/raport.png)
+
+ ### Bibliografie 
+  - [Research](https://www.w3schools.com)
+  - [Pictures](https://unsplash.com)
