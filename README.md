@@ -35,13 +35,13 @@ Acestea sunt paginile implementate de noi:
 
  ![plot](Screenshots/about.png)
 
- - Report: Cuprinde date despre modul in care a fost realizata pagina, functiile acesteia si detalii despre contributia fiecarui membru.
-
- ![plot](Screenshots/raport.png)
-
- - Admin: Aceasta pagina este disponibila doar adminilor. Acestia pot vedea/modifica detalii despre curse, pisici si utilizatori.
+- Admin: Aceasta pagina este disponibila doar adminilor. Acestia pot vedea/modifica detalii despre curse, pisici si utilizatori.
 
   ![plot](Screenshots/admin.png)
+
+- Report: Cuprinde date despre modul in care a fost realizata pagina, functiile acesteia si detalii despre contributia fiecarui membru.
+
+ ![plot](Screenshots/raport.png)
 
  ### Bibliografie 
   - [Research](https://www.w3schools.com)
