@@ -39,6 +39,10 @@ Acestea sunt paginile implementate de noi:
 
  ![plot](Screenshots/raport.png)
 
+ - Admin: Aceasta pagina este disponibila doar adminilor. Acestia pot vedea/modifica detalii despre curse, pisici si utilizatori.
+
+  ![plot](Screenshots/admin.png)
+
  ### Bibliografie 
   - [Research](https://www.w3schools.com)
   - [Pictures](https://unsplash.com)
