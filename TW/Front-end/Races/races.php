@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html Lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="races_style.css">
+    <title>Races</title>
+
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h4>RACES</h4>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../About/about.php">About</a></li>
+            <li><a href="../Profile/profile.php">Profile</a></li>
+            <li><a href="../History/history.php">History</a></li>
+            <li><a href="../Report/report.php">Report</a></li>
+
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+
+        </div>
+    </nav>
+
+    <div class="content">
+
+        <form class="form_date">
+            <label for="match_day">Choose a date:</label>
+            <input type="date" id="match_day" name="match_day">
+            <input class="bsubmit" type="submit" value="Select">
+        </form>
+
+        <div class="races">
+            <table id="matches">
+                <tr>
+                    <th>ID</th>
+                    <th>Race</th>
+                    <th>1st Cat Odds </th>
+                    <th>2nd Cat Odds</th>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                    <td>R120</td>
+                    <td>Blue vs. Red</td>
+                    <td>2.35</td>
+                    <td>3.65</td>
+                    <td>11.04.2022</td>
+                </tr>
+                <tr>
+                    <td>R121</td>
+                    <td>Tasha vs. Trixie</td>
+                    <td>5.02</td>
+                    <td>4.78</td>
+                    <td>10.04.2022</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="info">
+            <h5>Place your bet</h5>
+            <form class="ticket">
+                <label for="code">Race ID:</label><br>
+                <input type="text" id="code" name="code"><br>
+                <label for="cat">Cat:</label><br>
+                <input type="text" id="cat" name="cat"><br>
+                <label for="money">Amount ($): </label><br>
+                <input type="number" id="money" name="money"><br><br>
+            </form>
+
+            <button class="braces">Bet now!</button>
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+
+
+
+
+</html>
