@@ -62,14 +62,17 @@
                     else
                     {
                       ?>
-                      <table border="1">
-                      <tr>
-                        <th>ID</th>
-                        <th>Race</th>
-                        <th>Date</th>
-                        <th>Winner</th>
-                        <th>Outcome</th>
-                      </tr>
+                      <div class="races">
+
+                        <table border="1" id="matches">
+                        <tr>
+                            <th>ID</th>
+                            <th>Race</th>
+                            <th>Date</th>
+                            <th>Winner</th>
+                            <th>Outcome</th>
+                        </tr>
+                      </div>
                       <?php
                       while ($row = mysqli_fetch_array($query))
                       {
@@ -85,32 +88,8 @@
         </form>
 
 
-
-        <!-- <div class="races">
-            <table id="matches">
-                <tr>
-                    <th>Race</th>
-                    <th>Date</th>
-                    <th>Winner</th>
-                    <th>Outcome</th>
-                </tr>
-                <tr>
-                    <td>Pablo vs. Escobar</td>
-                    <td>10.04.2022</td>
-                    <td>Pablo</td>
-                    <td>+20$</td>
-                </tr>
-                <tr>
-                    <td>Yuki vs. Cookie</td>
-                    <td>10.04.2022</td>
-                    <td>Cookie</td>
-                    <td>-</td>
-                </tr>
-            </table>
-        </div> -->
-
         
-    <button onclick="location.href='../Races/races.html'" class="braces">Try your luck now!</button>
+        <!-- <button onclick="location.href='../Races/races.html'" class="braces">Try your luck now!</button> -->
     </div>
 
 
