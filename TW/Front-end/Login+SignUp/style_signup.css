@@ -212,7 +212,7 @@ section .contentBx .formBx .inputBx input
     border-radius: 30px;
 }
 
-section .contentBx .formBx .inputBx input[type="button"]
+section .contentBx .formBx .inputBx input[type="submit"]
 {
     background: #734F4A;
     color: white;
@@ -222,7 +222,7 @@ section .contentBx .formBx .inputBx input[type="button"]
     cursor: pointer;
 }
 
-section .contentBx .formBx .inputBx input[type="button"]:hover
+section .contentBx .formBx .inputBx input[type="submit"]:hover
 {
    background: #5f403d; 
 }

@@ -1,3 +1,68 @@
+<?php
+
+$conn = mysqli_connect("localhost", "root", "", "tw");
+
+
+if ($conn === false) {
+    die("ERROR: Could not connect. "
+        . mysqli_connect_error());
+}
+
+if (isset($_POST["Register"])) {
+
+
+    $first_name =  $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $password =  $_POST['password'];
+    $adress = $_POST['adress'];
+    $email = $_POST['email'];
+    $pass_conf = $_POST['confirm_pass'];
+
+
+    $error= FALSE;
+
+    if ($first_name == '' || $last_name == '' || $password == '' || $adress == '' || $email == '' || $pass_conf == '' )
+    {
+        echo "All fields must be completed. \n";
+        $error = TRUE;
+    }
+
+    if($error == FALSE && $password !== $pass_conf)
+    {
+        echo "Passwords don't match. \n";
+        $error = TRUE;
+    }
+
+    if($error == FALSE)
+    {
+        $sql_mail="SELECT * FROM users WHERE email = '$email'";
+
+        if (mysqli_num_rows(mysqli_query($conn, $sql_mail)) > 0) {
+            echo "The email is already taken. \n";
+            $error=TRUE;
+        }
+    }
+
+    if($error ==FALSE)
+    {
+        $sql = "INSERT INTO users  VALUES ('$email', '$password', '$first_name', '$last_name','$adress')";
+        if (mysqli_query($conn, $sql)) {
+            echo "Successful registration. \n";
+            header('Location: ../Races/races.php');
+        } else {
+            echo "Erorr. \n";
+        }
+    }
+}
+
+
+mysqli_close($conn);
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html Lang="en">
 
@@ -33,9 +98,9 @@
             </div>
 
             <div class="contentBx">
-                <div class="formBx" >
+                <div class="formBx">
                     <h2>Your info</h2>
-                    <form action="../../Backend/Signup/process_signup.php" method="post">
+                    <form method="post" action="">
                         <div class="inputBx">
                             <span>First Name</span>
                             <input name="first_name" type="text">
@@ -50,7 +115,7 @@
                         </div>
                         <div class="inputBx">
                             <span>Adress</span>
-                            <input name="adress" type="text">
+                            <input name="adress" type="text" placeholder="Country, County, City">
                         </div>
                         <div class="inputBx">
                             <span>Password</span>
@@ -61,7 +126,7 @@
                             <input name="confirm_pass" type="password">
                         </div>
                         <div class="inputBx">
-                            <input type="submit" value="Register">
+                            <input type="submit" value="Register" name="Register">
                         </div>
                         <div class="inputBx">
                             <p>Already have an account? <a href="login.php">Login</a></p>
@@ -79,3 +144,5 @@
 
     <script src="app.js"></script>
 </body>
+
+</html>
