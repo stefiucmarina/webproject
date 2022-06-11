@@ -37,37 +37,58 @@
 
     <div class="content">
 
-        <form class="form_date">
+        <form class="form_date" method="post" autocomplete="off">
             <label for="match_day">Choose a date:</label>
             <input type="date" id="match_day" name="match_day">
-            <input class="bsubmit" type="submit">
+            <input class="bsubmit" type="submit" name="Search">
+            <?php
+                $conn = mysqli_connect("localhost", "root", "", "tw");
+         
+                // Check connection
+                if($conn === false){
+                    die("ERROR: Could not connect. "
+                    . mysqli_connect_error());
+                }
+
+                if(isset($_POST["Search"]))
+                {
+                    $selecttxt=$_POST["match_day"];
+                    $query=mysqli_query($conn,"select * from races where date='$selecttxt'");
+                    $count=mysqli_num_rows($query);
+                    if ($count=="0")
+                    {
+                        echo "<h2> No records found! </h2>";
+                    }
+                    else
+                    {
+                      ?>
+                      <div class="races">
+
+                        <table border="1" id="matches">
+                        <tr>
+                            <th>ID</th>
+                            <th>Race</th>
+                            <th>Date</th>
+                            <th>Winner</th>
+                        </tr>
+                      </div>
+                      <?php
+                      while ($row = mysqli_fetch_array($query))
+                      {
+                          echo "<tr><td>{$row["id"]}</td><td>{$row["race"]}</td><td>
+                                {$row["date"]}</td><td>{$row["winner"]}</td>
+                                </tr>\n";
+                                
+                      }
+                      
+                    }
+                }
+            ?>
         </form>
 
-        <div class="races">
-            <table id="matches">
-                <tr>
-                    <th>Race</th>
-                    <th>Date</th>
-                    <th>Winner</th>
-                    <th>Outcome</th>
-                </tr>
-                <tr>
-                    <td>Pablo vs. Escobar</td>
-                    <td>10.04.2022</td>
-                    <td>Pablo</td>
-                    <td>+20$</td>
-                </tr>
-                <tr>
-                    <td>Yuki vs. Cookie</td>
-                    <td>10.04.2022</td>
-                    <td>Cookie</td>
-                    <td>-</td>
-                </tr>
-            </table>
-        </div>
 
-        <button onclick="location.href='../Races/races.php'" class="braces">Try your luck now!</button>
-
+        
+        <!-- <button onclick="location.href='../Races/races.html'" class="braces">Try your luck now!</button> -->
     </div>
 
 

@@ -28,7 +28,9 @@ if (isset($_POST["Signin"])) {
         $sql_mail="SELECT * FROM users WHERE email = '$email' AND password = '$password'";
 
         if (mysqli_num_rows(mysqli_query($conn, $sql_mail)) > 0) {
+            session_start();
             echo "Successful login. \n";
+            $_SESSION['user_email']=$_POST['email'];
             header('Location: ../Races/races.php');
         }
         else

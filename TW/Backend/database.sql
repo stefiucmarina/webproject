@@ -29,8 +29,6 @@ CREATE TABLE `USER_RACE`(
     `id` int(11) NOT NULL,
     `email` varchar(100) NOT NULL,
     `race` varchar(100) NOT NULL,
-    `odd_1` decimal(3,2) NOT NULL,
-    `odd_2` decimal(3,2) NOT NULL,
     `date` date NOT NULL,
     `winner` varchar(100) NOT NULL,
     `outcome` int(11),
@@ -54,7 +52,7 @@ INSERT INTO RACES (race, odd_1, odd_2, date, winner) VALUES('Chloey vs. Alma',3.
 
 
 
--- INSERT INTO USER_RACE VALUES();
+INSERT INTO USER_RACE VALUES(1,'maria.begu@gmail.com','Rick vs. Morty','2022-06-10','Rick',50);
 -- INSERT INTO USER_RACE VALUES();
 -- INSERT INTO USER_RACE VALUES();
 -- INSERT INTO USER_RACE VALUES();
