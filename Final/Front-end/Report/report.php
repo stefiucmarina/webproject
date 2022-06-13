@@ -43,6 +43,7 @@
             matches and download the data in different formats (CSV, HTML, Markdown and XML). </p>
     </section>
 
+
     <section id="introduction">
         <h1> 2. Introduction </h1>
         <p>The first interaction with our application is through the <i>Home</i> page, where you choose
@@ -68,7 +69,7 @@
         </p>
 
         <p><b>3.</b> After the user has logged in, they are sent to the
-            <i>Races</i> page, where they can bet on matches for that day, or future ones that are listed.
+            <i>Races</i> page, where they can bet on matches for that day, or future ones that are listed. 
         </p>
 
         <p><b>4.</b> If the user is interested in finding information about past matches, they can access the
@@ -79,16 +80,19 @@
         <p><b>5.</b>
             The user can see their own activity (bets) in
             the <i>Profile</i> section and find other information such as: reports in CSV, HTML, Markdown and XML format,
-            account balance (in dollars), a button for editing personal information and a button for
-            contacting technical support (admin).</p>
+            account balance (in dollars), a button for editing personal information, a button for
+            contacting technical support (admin) and a LogOut button. Here they can also see how much money they have left 
+            after a bet, or get, when the race is over. The way thae the profit is calculated is by multypling the odd of 
+            the winner (if they have chosen the right cat) by the amount they betted, value that will be added to the 
+            current balance.</p>
 
         <p><b>6.</b>
             In order to find more information about the project, team members and how to contact them, <i>About</i> page
-            provides all of the mentioned detalis to the user. </p>
+            provides all of the mentioned detailes to the user. </p>
 
         <p><b>7.</b>
             We also have a separate admin account, and the <i>Admin</i> section
-            involves actions such as: viewing general information, adding or deleting cats, matches, users, etc.</p>
+            involves actions such as: viewing general information, adding or deleting matches, users, etc.</p>
     </section>
 
 
@@ -113,7 +117,35 @@
             through the following phases: "design", "to do", "doing", "testing", "feedback", and "done".
             Trello makes our teamwork easier, we collaborate more easily, we see the progress in real time and
             we consider this an important factor for increasing self-productivity.</p>
+
         </p>
+
+        <p>
+            <b> 3. PHP </b>
+        <p> PHP is a server-side scripting language that can be integrated in HTML and is suitable for
+            web development. It's mostly utilized for database management, session tracking, and verifications
+            that wouldn't be achievable without scripting in general. It is frequently used in our project to
+            query the database in order to print particular things on the screen, such as the current user's bets,
+            all the matches, or the current user's information. It can also be used to produce reports in different
+            formats such as: CSV, HTML, Markdown, XML.</p>
+
+        </p>
+
+        <p>
+            <b> 4. MySQL </b>
+        <p> We utilize MySQL, a widely used database management system, to manage our database and tables.
+            Our database has three tables that PHP uses in its queries.
+        <ul>
+            <li>Users: information about users, like email, password, first name, second name, address and balance.</li>
+            <li>Races: information about races (ID, Race, First cat name, Second cat name, First cat odd, 
+                Second cat odd, Date of the race, Winner)</li>
+            <li>User Race: this table helps us to visualize all the matches the user betted, and it is changed 
+                with every finished match. </li>
+        </ul></p>
+
+        </p>
+
+
     </section>
 
 
@@ -131,13 +163,24 @@
             The register option requires first name, last name, email, password and password
             confirmation in order to create an account, which will be saved in our database. </p>
         <p>You have permission to place or see bets only if you login or sign up in application. </p>
-        <p><b>3.View </b> </br>
-            The users can observe past matches in the <i>History</i> section and current ones in <i>Races</i>.
+
+        <p><b>3. Making bets</b> </br>
+            Once the user is authentified or registred, they will be redirected on the <i>Races</i> page. There they can
+            see the current matches and bet by choosing a race by ID, a cat, their odd and the amount they want to spend. The
+            ID has to be valid and the match is still ongoing (does not have a winner) so that the bet is justifiable.</p>
+        <p><b>3. View </b> </br>
+            The users can observe past matches in the <i>History</i> section and current or future ones in <i>Races</i>.
             They can see the matches they bet on in their <i>Profile</i> page.
-            Admin can also view all the matches, users, cats and the feedback received from clients.</p>
+            Admin can also view all the matches, users and the emails received from clients.</p>
         <p><b>4. Download</b> </br>
-            Every user can download the details about their matches and choose a format they like from the following:
+            Every user can download the details about matches and choose a format they like from the following:
             CSV, HTML, Markdown and XML. This action can only be done on the <i>Profile</i> page.</p>
+        <p><b>5. Edit</b> </br>
+            The user can add money in their virtual wallet and make changes to their personal info: password, first name,
+            last name, address. They can also send an email to customer support if they encounter any problems. </br>
+            Also, the admin's privileges let you add, delete and update races or even add and delete users. </p>
+
+
     </section>
 
 
@@ -147,35 +190,43 @@
         <p> Responsabilities in our project by now are as follow:</p>
         <b>Begu Maria</b> :
         <ul>
-            <li>Profile</li>
-            <li>History</li>
-            <li>Admin</li>
+            <li>Profile (front-end)</li>
+            <li>History (front-end)</li>
+            <li>Admin (front-end)</li>
+            <li>Login (back-end)</li>
+            <li>Sign Up (back-end)</li>
         </ul>
 
         <b>Darie Camelia</b> :
         <ul>
-            <li>Welcome</li>
-            <li>Admin</li>
-            <li>About</li>
+            <li>Welcome (front-end)</li>
+            <li>Admin (front-end)</li>
+            <li>About (front-end)</li>
             <li>ReadMe (GitHub)</li>
+            <li>Profile (back-end)</li>
+            <li>Admin (back-end)</li>
         </ul>
 
         <b>Ștefiuc Marina</b> :
         <ul>
-            <li>Login</li>
-            <li>Signup</li>
-            <li>About</li>
+            <li>Login (front-end)</li>
+            <li>Signup (front-end)</li>
+            <li>About (front-end)</li>
+            <li>History (back-end)</li>
+            <li>Races (back-end)</li>
         </ul>
 
         <p> <b>All three</b> collaborated for:</br>
         <ul>
-            <li>Menu</li>
-            <li>Races</li>
+            <li>Menu (front-end)</li>
+            <li>Races (front-end)</li>
             <li>Report</li>
             <li>Ideas, styles, color theme, design (type of buttons etc)</li>
             <li>Page management and control</li>
             <li>Responsiveness</li>
             <li>Linkage between pages</li>
+            <li>Solving issues, bugs</li>
+            <li>Database</li>
         </ul>
         </p>
     </section>
@@ -186,5 +237,7 @@
         <ul>
             <li><a href='https://www.w3schools.com/'>Research</a></li>
             <li><a href='https://unsplash.com/'>Pictures</a></li>
+            <li><a href='https://en.wikipedia.org'>About</a></li>
+            
         </ul>
     </section>
